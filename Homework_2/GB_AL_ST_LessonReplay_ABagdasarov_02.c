@@ -32,9 +32,12 @@ int main(int argc, char const *argv[]) {
   printf("%s","Enter operator: " );
   fseek(stdin, 0, SEEK_END);
   scanf("%c",&sign );
-
-  printf("%s","Enter second number: " );
-  scanf("%f",&num2 );
+  if (sign == '/') {
+    do {
+      printf("%s","Enter second number: " );
+      scanf("%f",&num2 );
+    } while(num2 == 0);
+  }
   if (!(sign == '/' && num2 == 0 )) {
   switch (sign) {
     case '+':
