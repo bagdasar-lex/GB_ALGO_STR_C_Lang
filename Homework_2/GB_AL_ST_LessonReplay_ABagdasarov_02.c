@@ -96,7 +96,7 @@ int main(int argc, char const *argv[]) {
 
 #include <stdio.h>
 
-int euclidus(int a, int b){
+ /* int euclidus(int a, int b){
     while (a != b) {
       if (a > b) {
         a = a - b;
@@ -106,6 +106,7 @@ int euclidus(int a, int b){
     }
     return a;
 }
+*/
 int euclidusFast(int a, int b,) {
   int c;
   while (b) {
