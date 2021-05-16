@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
 */
 
 
-
+/*
 #include <stdio.h>
 
 int main(int argc, char const *argv[]) {
@@ -57,5 +57,37 @@ int main(int argc, char const *argv[]) {
   } else {
     printf("%s\n", "Incorect input, division by zero!" );
   }
+  return 0;
+}
+*/
+
+
+
+//Алгоритм Эвклида
+
+
+#include <stdio.h>
+
+int euclidus(int a, int b){
+    while (a != b) {
+      if (a > b) {
+        a = a - b;
+      } else {
+        b = b - a;
+      }
+    }
+    return a;
+}
+
+int main(int argc, char const *argv[]) {
+  int a;
+  int b;
+
+  printf("%s","Enter A: " );
+  scanf("%d",&a );
+  printf("%s","Enter B: " );
+  scanf("%d",&b );
+
+  printf("НОД = %d\n",euclidus(a, b) );
   return 0;
 }
