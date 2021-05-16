@@ -63,7 +63,7 @@ int main(int argc, char const *argv[]) {
 
 
 
-//Алгоритм Эвклида
+/*//Алгоритм Эвклида
 
 
 #include <stdio.h>
@@ -89,5 +89,42 @@ int main(int argc, char const *argv[]) {
   scanf("%d",&b );
 
   printf("НОД = %d\n",euclidus(a, b) );
+  return 0;
+}
+*/
+//Ускоренный Эвклид
+
+#include <stdio.h>
+
+int euclidus(int a, int b){
+    while (a != b) {
+      if (a > b) {
+        a = a - b;
+      } else {
+        b = b - a;
+      }
+    }
+    return a;
+}
+int euclidusFast(int a, int b,) {
+  int c;
+  while (b) {
+    c = a % b;
+    a = b;
+    b = c;
+  }
+  return a;
+}
+
+int main(int argc, char const *argv[]) {
+  int a;
+  int b;
+
+  printf("%s","Enter A: " );
+  scanf("%d",&a );
+  printf("%s","Enter B: " );
+  scanf("%d",&b );
+
+  printf("НОД = %d\n",euclidusFast(a, b) );
   return 0;
 }
